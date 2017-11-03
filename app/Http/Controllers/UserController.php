@@ -20,7 +20,6 @@ class UserController extends Controller
             
         ];
         $code = $request->input('code');
-        // $name = $request->get('nick_name');
         $app = new Application($options);
         $miniProgram = $app->mini_program;
         $data = $miniProgram->sns->getSessionKey($code);

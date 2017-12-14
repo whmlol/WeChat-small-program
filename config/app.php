@@ -178,6 +178,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         Overtrue\LaravelWeChat\ServiceProvider::class,
+        Laravel\Passport\PassportServiceProvider::class,
 
     ],
 

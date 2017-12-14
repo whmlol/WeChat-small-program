@@ -6,6 +6,7 @@ use EasyWeChat\Foundation\Application;
 use Illuminate\Support\Facades\Redis;
 use Illuminate\Http\Request;
 use App\Model\Users;
+use App\Utils;
 
 class UserController extends Controller
 {
@@ -16,7 +17,7 @@ class UserController extends Controller
             'mini_program' => [
                 'app_id'   => env('WECHAT_MINI_PROGRAM_APPID', ''),
                 'secret'   => env('WECHAT_MINI_PROGRAM_SECRET', ''),
-                ],
+            ],
             
         ];
         $code = $request->input('code');
@@ -30,24 +31,27 @@ class UserController extends Controller
             $user = new Users();
             $user->user_openid = $data['openid'];
             $user->user_name = $request->input('nick_name');
+            $user->user_icon = $request->input('icon');
+            $user->user_province = $request->input('province');
+            $user->user_city = $request->input('city');
             $user->save();
         }
-
-        $key = str_random(20);
-        Redis::setex($key, 7000, $data['session_key'].":".$data['openid']);
-
-        $ret = [
-        	'ssid' => $key,
+        //生成令牌
+        $token = $user->createToken('token', [])->accessToken;
+        $res = Utils::getStateCode('success');
+        $res['data'] = [
+            'access_token' => $token,
+            'userId' => $user->user_id
         ];
 
-        return json_encode($ret);
+        return json_encode($res);
     } 
 
-    public function  updateUserInfo(Request $request){
-    	$sessionId = $request->input('sessionId');
-    	$value = Redis::get($sessionId);
-    	$openid = explode(':', $value)[1];
-    	$user = Users::where('openid',$openid)
-    					->update($request->all());
-    }
+    // public function  updateUserInfo(Request $request){
+    // 	$sessionId = $request->input('sessionId');
+    // 	$value = Redis::get($sessionId);
+    // 	$openid = explode(':', $value)[1];
+    // 	$user = Users::where('openid',$openid)
+    // 					->update($request->all());
+    // }
 }

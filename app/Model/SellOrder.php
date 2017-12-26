@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class SellOrder extends Model
 {
-    protected $table = 'sell_order';
+    protected $table = 'sell_orders';
 
     protected $guarded = [];
 }

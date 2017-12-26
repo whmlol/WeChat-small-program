@@ -179,6 +179,7 @@ return [
 
         Overtrue\LaravelWeChat\ServiceProvider::class,
         Laravel\Passport\PassportServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
 
     ],
 
@@ -230,6 +231,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         
         'EasyWeChat' => Overtrue\LaravelWeChat\Facade::class,
+        'Image' => Intervention\Image\Facades\Image::class
 
     ],
 

@@ -15,15 +15,15 @@ class CreateSellOrderTable extends Migration
     {
         Schema::create('sell_orders', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('sell_name',45);
-            $table->string('sell_tel',45)->nullable();
-            $table->unsignedTinyInteger('sell_sex')->comment('0未知 1男 2女');
-            $table->string('sell_city',45);
-            $table->string('sell_description',550)->nullable();
             $table->string('sell_photo',550);
+            $table->string('sell_name',45);
             $table->unsignedTinyInteger('sell_age');
+            $table->unsignedTinyInteger('sell_sex')->comment('0未知 1男 2女');
+            $table->string('sell_tel',45)->nullable();
             $table->decimal('sell_height',4,1);
             $table->decimal('sell_weight',4,1);
+            $table->string('sell_city',45);
+            $table->string('sell_description',550)->nullable();
             $table->string('sell_wechat_number',45)->comment('被卖人微信号');
             $table->timestamps();
         });

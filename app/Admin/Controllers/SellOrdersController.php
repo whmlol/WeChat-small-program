@@ -75,10 +75,10 @@ class SellOrdersController extends Controller
 
             $grid->id('ID')->sortable();
             $grid->sell_photo('头像')->display(function ($sell_photo) {
-                return "<image style='height:30px;width:30px;'' src='$sell_photo'/>";
+                return "<image style='height:30px;width:30px;'' src='/uploads/$sell_photo'/>";
             });
             $grid->sell_name('姓名')->editable();
-            $grid->sell_sex('性别')->editable('select', [1 => '男', 2 => '女', 3 => '外星人']);
+            $grid->sell_sex('性别')->editable('select', [1 => '男', 2 => '女'])->sortable();
             $grid->sell_age('年龄')->sortable()->editable();
             $grid->sell_height('身高')->sortable()->editable();
             $grid->sell_weight('体重')->sortable()->editable();
@@ -103,20 +103,19 @@ class SellOrdersController extends Controller
             $sex = [
                 1  => '男',
                 2 => '女',
-                3  => '外星人',
             ];
-            $width = 50;
-            $height = 50;
+            $width = 500;
+            $height = 500;
 
             $form->display('id', 'ID');
-            $form->image('avatar', trans('admin.avatar'))->crop($width,$height);
+            $form->image('sell_photo','头像')->resize($width,$height);
             $form->text('sell_name','姓名');
-            $form->select('sell_sex','性别')->options($sex);
+            $form->radio('sell_sex','性别')->options($sex);
             $form->number('sell_age','年龄');
             $form->number('sell_height','身高');
             $form->number('sell_weight','体重');
             $form->text('sell_city','城市');
-            $form->text('sell_tel','电话');
+            $form->mobile('sell_tel','电话')->options(['mask' => '999 9999 9999']);
             $form->text('sell_wechat_number','微信号');
             $form->textarea('sell_description','描述');
             $form->display('created_at', '创建时间');

@@ -1,0 +1,89 @@
+2018/04/21 09:46:17 [I] [proxy_manager.go:298] proxy removed: []
+2018/04/21 09:46:17 [I] [proxy_manager.go:308] proxy added: [web]
+2018/04/21 09:46:17 [I] [proxy_manager.go:331] visitor removed: []
+2018/04/21 09:46:17 [I] [proxy_manager.go:340] visitor added: []
+2018/04/21 09:46:17 [I] [control.go:240] [43e253562ed5e5d2] login to server success, get run id [43e253562ed5e5d2], server udp port [0]
+2018/04/21 09:46:17 [I] [control.go:165] [43e253562ed5e5d2] [web] start proxy success
+2018/04/21 09:48:34 [I] [proxy_manager.go:298] proxy removed: []
+2018/04/21 09:48:34 [I] [proxy_manager.go:308] proxy added: [web]
+2018/04/21 09:48:34 [I] [proxy_manager.go:331] visitor removed: []
+2018/04/21 09:48:34 [I] [proxy_manager.go:340] visitor added: []
+2018/04/21 09:48:34 [I] [control.go:240] [488c0af809429148] login to server success, get run id [488c0af809429148], server udp port [0]
+2018/04/21 09:48:34 [I] [control.go:165] [488c0af809429148] [web] start proxy success
+2018/04/21 09:49:40 [I] [proxy_manager.go:298] proxy removed: []
+2018/04/21 09:49:40 [I] [proxy_manager.go:308] proxy added: [web]
+2018/04/21 09:49:40 [I] [proxy_manager.go:331] visitor removed: []
+2018/04/21 09:49:40 [I] [proxy_manager.go:340] visitor added: []
+2018/04/21 09:49:40 [I] [control.go:240] [5bddd0136fc7c23d] login to server success, get run id [5bddd0136fc7c23d], server udp port [0]
+2018/04/21 09:49:40 [I] [control.go:165] [5bddd0136fc7c23d] [web] start proxy success
+2018/04/21 09:52:34 [I] [proxy_manager.go:298] proxy removed: []
+2018/04/21 09:52:34 [I] [proxy_manager.go:308] proxy added: [web]
+2018/04/21 09:52:34 [I] [proxy_manager.go:331] visitor removed: []
+2018/04/21 09:52:34 [I] [proxy_manager.go:340] visitor added: []
+2018/04/21 09:52:34 [I] [control.go:240] [aaeee91fc17d20e7] login to server success, get run id [aaeee91fc17d20e7], server udp port [0]
+2018/04/21 09:52:34 [I] [control.go:165] [aaeee91fc17d20e7] [web] start proxy success
+2018/04/21 10:02:25 [I] [proxy_manager.go:298] proxy removed: []
+2018/04/21 10:02:25 [I] [proxy_manager.go:308] proxy added: [web]
+2018/04/21 10:02:25 [I] [proxy_manager.go:331] visitor removed: []
+2018/04/21 10:02:25 [I] [proxy_manager.go:340] visitor added: []
+2018/04/21 10:02:25 [I] [control.go:240] [5d69d926643eda69] login to server success, get run id [5d69d926643eda69], server udp port [0]
+2018/04/21 10:02:25 [I] [control.go:165] [5d69d926643eda69] [web] start proxy success
+2018/04/21 10:07:31 [I] [proxy_manager.go:298] proxy removed: []
+2018/04/21 10:07:32 [I] [proxy_manager.go:308] proxy added: [web]
+2018/04/21 10:07:32 [I] [proxy_manager.go:331] visitor removed: []
+2018/04/21 10:07:32 [I] [proxy_manager.go:340] visitor added: []
+2018/04/21 10:07:32 [I] [control.go:240] [382b98615eba25dd] login to server success, get run id [382b98615eba25dd], server udp port [0]
+2018/04/21 10:07:32 [W] [control.go:163] [382b98615eba25dd] [web] start error: proxy name [web] is already in use
+2018/04/21 10:08:32 [W] [control.go:163] [382b98615eba25dd] [web] start error: proxy name [web] is already in use
+2018/04/21 10:09:32 [W] [control.go:163] [382b98615eba25dd] [web] start error: proxy name [web] is already in use
+2018/04/21 10:09:56 [I] [proxy_manager.go:298] proxy removed: []
+2018/04/21 10:09:56 [I] [proxy_manager.go:308] proxy added: [web]
+2018/04/21 10:09:56 [I] [proxy_manager.go:331] visitor removed: []
+2018/04/21 10:09:56 [I] [proxy_manager.go:340] visitor added: []
+2018/04/21 10:09:56 [I] [control.go:240] [9c65614a1e718069] login to server success, get run id [9c65614a1e718069], server udp port [0]
+2018/04/21 10:09:56 [W] [control.go:163] [9c65614a1e718069] [web] start error: proxy name [web] is already in use
+2018/04/21 10:18:18 [I] [proxy_manager.go:298] proxy removed: []
+2018/04/21 10:18:18 [I] [proxy_manager.go:308] proxy added: [web]
+2018/04/21 10:18:18 [I] [proxy_manager.go:331] visitor removed: []
+2018/04/21 10:18:18 [I] [proxy_manager.go:340] visitor added: []
+2018/04/21 10:18:18 [I] [control.go:240] [3bd80c0c15924e73] login to server success, get run id [3bd80c0c15924e73], server udp port [0]
+2018/04/21 10:18:18 [W] [control.go:163] [3bd80c0c15924e73] [web] start error: proxy name [web] is already in use
+2018/04/21 10:19:03 [I] [proxy_manager.go:298] proxy removed: []
+2018/04/21 10:19:03 [I] [proxy_manager.go:308] proxy added: [webapp]
+2018/04/21 10:19:03 [I] [proxy_manager.go:331] visitor removed: []
+2018/04/21 10:19:03 [I] [proxy_manager.go:340] visitor added: []
+2018/04/21 10:19:03 [I] [control.go:240] [dc51aca8db635e01] login to server success, get run id [dc51aca8db635e01], server udp port [0]
+2018/04/21 10:19:03 [I] [control.go:165] [dc51aca8db635e01] [webapp] start proxy success
+2018/04/21 13:57:35 [I] [proxy_manager.go:298] proxy removed: []
+2018/04/21 13:57:35 [I] [proxy_manager.go:308] proxy added: [webapp]
+2018/04/21 13:57:35 [I] [proxy_manager.go:331] visitor removed: []
+2018/04/21 13:57:35 [I] [proxy_manager.go:340] visitor added: []
+2018/04/21 13:57:35 [I] [control.go:240] [0b8974435f98b336] login to server success, get run id [0b8974435f98b336], server udp port [0]
+2018/04/21 13:57:35 [I] [control.go:165] [0b8974435f98b336] [webapp] start proxy success
+2018/04/23 10:08:42 [I] [proxy_manager.go:298] proxy removed: []
+2018/04/23 10:08:42 [I] [proxy_manager.go:308] proxy added: [webapp]
+2018/04/23 10:08:42 [I] [proxy_manager.go:331] visitor removed: []
+2018/04/23 10:08:42 [I] [proxy_manager.go:340] visitor added: []
+2018/04/23 10:08:42 [I] [control.go:240] [d474f3c3efa393fa] login to server success, get run id [d474f3c3efa393fa], server udp port [0]
+2018/04/23 10:08:42 [I] [control.go:165] [d474f3c3efa393fa] [webapp] start proxy success
+2018/04/23 13:30:51 [I] [proxy_manager.go:298] proxy removed: []
+2018/04/23 13:30:51 [I] [proxy_manager.go:308] proxy added: [webapp]
+2018/04/23 13:30:51 [I] [proxy_manager.go:331] visitor removed: []
+2018/04/23 13:30:51 [I] [proxy_manager.go:340] visitor added: []
+2018/04/23 13:30:51 [I] [control.go:240] [a1aecaca6e309b6a] login to server success, get run id [a1aecaca6e309b6a], server udp port [0]
+2018/04/23 13:30:51 [I] [control.go:165] [a1aecaca6e309b6a] [webapp] start proxy success
+2018/04/26 16:23:32 [I] [proxy_manager.go:298] proxy removed: []
+2018/04/26 16:23:32 [I] [proxy_manager.go:308] proxy added: [webapp]
+2018/04/26 16:23:32 [I] [proxy_manager.go:331] visitor removed: []
+2018/04/26 16:23:32 [I] [proxy_manager.go:340] visitor added: []
+2018/04/26 16:23:32 [I] [control.go:240] [736becc319b12bfd] login to server success, get run id [736becc319b12bfd], server udp port [0]
+2018/04/26 16:23:32 [W] [control.go:163] [736becc319b12bfd] [webapp] start error: proxy name [webapp] is already in use
+2018/04/26 16:24:04 [I] [proxy_manager.go:298] proxy removed: []
+2018/04/26 16:24:04 [I] [proxy_manager.go:308] proxy added: [webapp]
+2018/04/26 16:24:04 [I] [proxy_manager.go:331] visitor removed: []
+2018/04/26 16:24:04 [I] [proxy_manager.go:340] visitor added: []
+2018/04/26 16:24:04 [I] [control.go:240] [e99d9091980062e3] login to server success, get run id [e99d9091980062e3], server udp port [0]
+2018/04/26 16:24:04 [W] [control.go:163] [e99d9091980062e3] [webapp] start error: proxy name [webapp] is already in use
+2018/04/26 16:25:04 [W] [control.go:163] [e99d9091980062e3] [webapp] start error: proxy name [webapp] is already in use
+2018/04/26 16:26:04 [W] [control.go:163] [e99d9091980062e3] [webapp] start error: proxy name [webapp] is already in use
+2018/04/26 16:27:04 [W] [control.go:163] [e99d9091980062e3] [webapp] start error: proxy name [webapp] is already in use

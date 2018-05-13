@@ -41,7 +41,7 @@ class UserController extends Controller
         $res = Utils::getStateCode('success');
         $res['data'] = [
             'access_token' => $token,
-            'userId' => $user->user_id
+            'userId' => $user->id
         ];
 
         return json_encode($res);

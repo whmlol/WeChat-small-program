@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\Model\SellOrder;
+use App\Models\SellOrder;
 
 use Encore\Admin\Form;
 use Encore\Admin\Grid;

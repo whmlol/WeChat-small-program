@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use EasyWeChat\Foundation\Application;
 use Illuminate\Support\Facades\Redis;
 use Illuminate\Http\Request;
-use App\Model\Users;
+use App\Models\WeChatUser;
 use App\Utils;
 
 class UserController extends Controller
@@ -26,14 +26,14 @@ class UserController extends Controller
         $data = $miniProgram->sns->getSessionKey($code);
 
         //填入会员信息
-        $user = Users::where('user_openid',$data['openid'])->first();
+        $user = WeChatUser::where('user_openid',$data['openid'])->first();
         if ($user == null) {
-            $user = new Users();
+            $user = new WeChatUser();
             $user->user_openid = $data['openid'];
-            $user->user_name = $request->input('nick_name');
-            $user->user_icon = $request->input('icon');
-            $user->user_province = $request->input('province');
-            $user->user_city = $request->input('city');
+            // $user->user_name = $request->input('nick_name');
+            // $user->user_icon = $request->input('icon');
+            // $user->user_province = $request->input('province');
+            // $user->user_city = $request->input('city');
             $user->save();
         }
         //生成令牌
@@ -41,7 +41,7 @@ class UserController extends Controller
         $res = Utils::getStateCode('success');
         $res['data'] = [
             'access_token' => $token,
-            'userId' => $user->user_id
+            'userId' => $user->id
         ];
 
         return json_encode($res);
@@ -51,7 +51,7 @@ class UserController extends Controller
     // 	$sessionId = $request->input('sessionId');
     // 	$value = Redis::get($sessionId);
     // 	$openid = explode(':', $value)[1];
-    // 	$user = Users::where('openid',$openid)
+    // 	$user = WeChatUser::where('openid',$openid)
     // 					->update($request->all());
     // }
 }

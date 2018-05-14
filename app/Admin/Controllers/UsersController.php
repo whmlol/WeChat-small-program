@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\Model\Users;
+use App\Models\WeChatUser;
 
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
@@ -71,7 +71,7 @@ class UsersController extends Controller
      */
     protected function grid()
     {
-        return Admin::grid(Users::class, function (Grid $grid) {
+        return Admin::grid(WeChatUser::class, function (Grid $grid) {
 
             $grid->id('ID')->sortable();
             $grid->column('user_icon','头像')->display(function ($sell_photo) {
@@ -97,7 +97,7 @@ class UsersController extends Controller
      */
     protected function form()
     {
-        return Admin::form(Users::class, function (Form $form) {
+        return Admin::form(WeChatUser::class, function (Form $form) {
 
             $sex = [
                 1  => '男',

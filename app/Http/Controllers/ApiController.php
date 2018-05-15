@@ -1,7 +1,7 @@
 <?php
 
-namespace App\Api\V1\Controllers;
-use App\Http\Controllers\Controller;
+namespace App\Http\Controllers;
+
 use App\Traits\Responder;
 
 class ApiController extends Controller

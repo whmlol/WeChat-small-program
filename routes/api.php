@@ -22,5 +22,9 @@ Route::post('updateUserInfo','UserController@updateUserInfo');
 
 $api = app('Dingo\Api\Routing\Router');
 $api->version('v1', function ($api) {
-
+    $api->group(['namespace' => 'App\Http\Controllers\SellFriendsApi\V1\Controllers'], function ($api) {
+        $api->get('showGirls','SellFriendsController@showGirls');
+        $api->get('showBoys','SellFriendsController@showBoys');
+        $api->get('showRecommends','SellFriendsController@showRecommends');
+    });
 });

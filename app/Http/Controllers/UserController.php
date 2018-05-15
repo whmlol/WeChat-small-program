@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Api\V1\Controllers\ApiController;
 use EasyWeChat\Foundation\Application;
-use Illuminate\Support\Facades\Redis;
 use Illuminate\Http\Request;
 use App\Models\WeChatUser;
 use App\Utils;
 
-class UserController extends Controller
+class UserController extends ApiController
 {
 
  public function wechatLogin(Request $request){

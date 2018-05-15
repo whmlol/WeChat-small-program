@@ -19,3 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('wechatLogin','UserController@wechatLogin');
 Route::post('updateUserInfo','UserController@updateUserInfo');
+
+$api = app('Dingo\Api\Routing\Router');
+$api->version('v1', function ($api) {
+
+});

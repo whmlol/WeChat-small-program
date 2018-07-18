@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Api\V1\Controllers\ApiController;
 use EasyWeChat\Foundation\Application;
 use Illuminate\Http\Request;
 use App\Models\WeChatUser;
@@ -11,14 +10,15 @@ use App\Utils;
 class UserController extends ApiController
 {
 
- public function wechatLogin(Request $request){
-    	$options = [
+    public function wechatLogin(Request $request)
+    {
+        $options = [
             // ...
             'mini_program' => [
-                'app_id'   => env('WECHAT_MINI_PROGRAM_APPID', ''),
-                'secret'   => env('WECHAT_MINI_PROGRAM_SECRET', ''),
+                'app_id' => env('WECHAT_MINI_PROGRAM_APPID', ''),
+                'secret' => env('WECHAT_MINI_PROGRAM_SECRET', ''),
             ],
-            
+
         ];
         $code = $request->input('code');
         $app = new Application($options);
@@ -26,8 +26,8 @@ class UserController extends ApiController
         $data = $miniProgram->sns->getSessionKey($code);
 
         //填入会员信息
-        $user = WeChatUser::where('user_openid',$data['openid'])->first();
-        if ($user == null) {
+        $user = WeChatUser::where('user_openid', $data['openid'])->first();
+        if ($user === null) {
             $user = new WeChatUser();
             $user->user_openid = $data['openid'];
             // $user->user_name = $request->input('nick_name');
@@ -45,7 +45,7 @@ class UserController extends ApiController
         ];
 
         return json_encode($res);
-    } 
+    }
 
     // public function  updateUserInfo(Request $request){
     // 	$sessionId = $request->input('sessionId');
